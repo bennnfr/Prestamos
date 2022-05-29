@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col">
+        <div class="form-floating mb-3 mt-3">
+            <input id="monto" type="number" class="form-control" (focusout)="focusOutFunction()" placeholder="Valor solicitado" [(ngModel)]="data.cantidadSolicitada" (blur)="validaMonto()">
+            <span style="color: red;" *ngIf="montoValido"> *El monto debe ser entre $1,000 y $200,000*</span>
+            <label for="monto">Monto (entre $1,000 y $200,000) </label>
+        </div>
+    </div>
+    <div class="col">
+        <div class="form-floating mb-3 mt-3">
+            <input type="date" class="form-control" placeholder="Fecha pagar" [(ngModel)]="data.fechaPago">
+            <label for="fecha">Fecha pagar</label>
+        </div>
+    </div>
+</div>
